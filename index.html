@@ -7,12 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
       background: #0f1f15;
@@ -21,226 +16,35 @@
       background-size: 48px 48px, 56px 56px;
       color: #dee9da;
     }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .hero-simple {
-      text-align: center;
-      padding: 50px 20px 40px;
-      border-bottom: 1px solid #2b4427;
-    }
-
-    .hero-simple h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3rem;
-      font-weight: 500;
-      color: #e2f0da;
-      letter-spacing: -0.3px;
-    }
-
-    .hero-simple p {
-      color: #b2caa4;
-      margin-top: 12px;
-      font-size: 1rem;
-    }
-
-    .heart-decoration {
-      font-size: 1.5rem;
-      letter-spacing: 8px;
-      color: #6f9e60;
-      margin-top: 20px;
-    }
-
-    .photo-frame {
-      max-width: 480px;
-      margin: 40px auto 30px;
-      background: #112115;
-      border-radius: 32px;
-      padding: 12px;
-      border: 1px solid #3c6236;
-      box-shadow: 0 12px 22px -8px rgba(0,0,0,0.4);
-    }
-
-    .photo-frame img {
-      width: 100%;
-      height: auto;
-      border-radius: 24px;
-      display: block;
-      object-fit: cover;
-      max-height: 320px;
-    }
-
-    .photo-frame-caption {
-      text-align: center;
-      margin-top: 12px;
-      font-size: 0.85rem;
-      color: #cbe2bc;
-    }
-
-    .change-photo-btn {
-      background: #1e3521;
-      border: 1px solid #568a49;
-      padding: 6px 16px;
-      border-radius: 30px;
-      font-size: 0.7rem;
-      cursor: pointer;
-      color: #e0f0d4;
-      margin-top: 8px;
-      display: inline-block;
-      transition: 0.2s;
-    }
-
-    .change-photo-btn:hover {
-      background: #2e4a2c;
-    }
-
-    .nav-minimal {
-      background: #0f1f15;
-      padding: 16px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(12px);
-      background: rgba(12, 28, 16, 0.92);
-      border-bottom: 1px solid #2b4427;
-    }
-
-    .nav-links {
-      display: flex;
-      justify-content: center;
-      gap: 48px;
-      list-style: none;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-weight: 500;
-      color: #cce2c0;
-      transition: 0.2s;
-      font-size: 1rem;
-      padding: 4px 0;
-      border-bottom: 1px solid transparent;
-    }
-
-    .nav-links a:hover {
-      color: #f0ffe6;
-      border-bottom-color: #7aa56e;
-    }
-
-    .letters-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-      gap: 40px;
-      margin: 50px 0 60px;
-    }
-
-    .letter-card {
-      background: #122117;
-      border-radius: 48px;
-      border: 1px solid #2a4826;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      text-decoration: none;
-      display: block;
-      color: inherit;
-    }
-
-    .letter-card:hover {
-      transform: translateY(-8px);
-      border-color: #6e9f5e;
-      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.5);
-    }
-
-    .card-header {
-      padding: 28px 28px 16px;
-      border-bottom: 1px solid #2e4d2a;
-      background: #0e1e13;
-    }
-
-    .card-header h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.9rem;
-      font-weight: 500;
-      color: #daf0ce;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .card-header h2 i {
-      color: #7aa56e;
-      font-size: 1.6rem;
-    }
-
-    .photo-strip {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 4px;
-      background: #112115;
-      padding: 12px;
-    }
-
-    .photo-strip img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 20px;
-      transition: 0.2s;
-      border: 1px solid #2f4d2b;
-    }
-
-    .photo-strip img:hover {
-      transform: scale(1.02);
-      border-color: #86bb74;
-    }
-
-    .card-preview {
-      padding: 20px 28px 28px;
-    }
-
-    .card-preview p {
-      color: #c0d6b4;
-      line-height: 1.6;
-      font-size: 0.95rem;
-    }
-
-    .read-more {
-      display: inline-block;
-      margin-top: 18px;
-      color: #aacc98;
-      font-weight: 500;
-      font-size: 0.85rem;
-      border-bottom: 1px solid #5c8f50;
-    }
-
-    footer {
-      text-align: center;
-      padding: 36px 20px 30px;
-      color: #8faf82;
-      font-size: 0.85rem;
-      border-top: 1px solid #244221;
-      margin-top: 20px;
-    }
-
-    @media (max-width: 860px) {
-      .letters-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-      .hero-simple h1 {
-        font-size: 2.3rem;
-      }
-    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .hero-simple { text-align: center; padding: 50px 20px 40px; border-bottom: 1px solid #2b4427; }
+    .hero-simple h1 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 500; color: #e2f0da; }
+    .hero-simple p { color: #b2caa4; margin-top: 12px; }
+    .heart-decoration { font-size: 1.5rem; letter-spacing: 8px; color: #6f9e60; margin-top: 20px; }
+    .photo-frame { max-width: 480px; margin: 40px auto 30px; background: #112115; border-radius: 32px; padding: 12px; border: 1px solid #3c6236; }
+    .photo-frame img { width: 100%; border-radius: 24px; display: block; max-height: 320px; object-fit: cover; }
+    .photo-frame-caption { text-align: center; margin-top: 12px; font-size: 0.85rem; color: #cbe2bc; }
+    .change-photo-btn { background: #1e3521; border: 1px solid #568a49; padding: 6px 16px; border-radius: 30px; font-size: 0.7rem; cursor: pointer; color: #e0f0d4; margin-top: 8px; display: inline-block; }
+    .nav-minimal { background: #0f1f15; padding: 16px 0; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px); background: rgba(12, 28, 16, 0.92); border-bottom: 1px solid #2b4427; }
+    .nav-links { display: flex; justify-content: center; gap: 48px; list-style: none; flex-wrap: wrap; }
+    .nav-links a { text-decoration: none; font-weight: 500; color: #cce2c0; transition: 0.2s; font-size: 1rem; padding: 4px 0; border-bottom: 1px solid transparent; }
+    .nav-links a:hover { color: #f0ffe6; border-bottom-color: #7aa56e; }
+    .letters-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 40px; margin: 50px 0 60px; }
+    .letter-card { background: #122117; border-radius: 48px; border: 1px solid #2a4826; overflow: hidden; transition: all 0.3s ease; cursor: pointer; text-decoration: none; display: block; color: inherit; }
+    .letter-card:hover { transform: translateY(-8px); border-color: #6e9f5e; box-shadow: 0 20px 30px -12px rgba(0,0,0,0.5); }
+    .card-header { padding: 28px 28px 16px; border-bottom: 1px solid #2e4d2a; background: #0e1e13; }
+    .card-header h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 500; color: #daf0ce; display: flex; align-items: center; gap: 12px; }
+    .card-header h2 i { color: #7aa56e; font-size: 1.6rem; }
+    .photo-strip { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; background: #112115; padding: 12px; }
+    .photo-strip img { width: 100%; height: 160px; object-fit: cover; border-radius: 20px; border: 1px solid #2f4d2b; }
+    .card-preview { padding: 20px 28px 28px; }
+    .card-preview p { color: #c0d6b4; line-height: 1.6; font-size: 0.95rem; }
+    .read-more { display: inline-block; margin-top: 18px; color: #aacc98; font-weight: 500; font-size: 0.85rem; border-bottom: 1px solid #5c8f50; }
+    footer { text-align: center; padding: 36px 20px 30px; color: #8faf82; border-top: 1px solid #244221; margin-top: 20px; }
+    @media (max-width: 860px) { .letters-grid { grid-template-columns: 1fr; } .hero-simple h1 { font-size: 2.3rem; } }
   </style>
 </head>
 <body>
-
 <div class="nav-minimal">
   <div class="container">
     <ul class="nav-links">
@@ -249,42 +53,32 @@
     </ul>
   </div>
 </div>
-
 <div class="hero-simple">
   <div class="container">
     <h1>for you, always</h1>
     <p>a soft place for words, memories, and a photograph</p>
-    <div class="heart-decoration">
-      <i class="fas fa-heart"></i>   <i class="fas fa-heart"></i>   <i class="fas fa-heart"></i>
-    </div>
+    <div class="heart-decoration"><i class="fas fa-heart"></i>   <i class="fas fa-heart"></i>   <i class="fas fa-heart"></i></div>
   </div>
 </div>
-
 <div class="container">
-  <div class="photo-frame" id="specialPhotoFrame">
-    <img id="mainPortrait" src="https://images.pexels.com/photos/1028725/child-birthday-cake-celebration-1028725.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cherished memory">
+  <div class="photo-frame">
+    <img id="mainPortrait" src="416cb3bd-e58e-4282-a686-c1d868ff8f0d.jpg" alt="Cherished memory" onerror="this.src='https://placehold.co/600x400/1a2c1c/6f9e60?text=Upload+Photo'">
     <div class="photo-frame-caption">
       <i class="fas fa-heart"></i> a moment we hold close
       <div><button id="changePhotoBtn" class="change-photo-btn"><i class="fas fa-camera"></i> change this photo</button></div>
     </div>
   </div>
-
   <div class="letters-grid">
     <a href="readforyourbirthday.html" class="letter-card">
-      <div class="card-header">
-        <h2><i class="fas fa-feather-alt"></i> read for your birthday</h2>
-      </div>
+      <div class="card-header"><h2><i class="fas fa-feather-alt"></i> read for your birthday</h2></div>
       <div class="photo-strip" id="birthdayPhotoStrip"></div>
       <div class="card-preview">
         <p>A letter written just for you — words from the heart, wishes for your special day, and all the love I hold for you. Click to open your personal birthday letter.</p>
         <span class="read-more"><i class="fas fa-arrow-right"></i> open letter</span>
       </div>
     </a>
-
     <a href="readaftermaxwell.html" class="letter-card">
-      <div class="card-header">
-        <h2><i class="fas fa-star"></i> read after maxwell</h2>
-      </div>
+      <div class="card-header"><h2><i class="fas fa-star"></i> read after maxwell</h2></div>
       <div class="photo-strip" id="maxwellPhotoStrip"></div>
       <div class="card-preview">
         <p>Open this when you feel low or when you're away from Maxwell. A letter to remind you of your light, your love, and your purpose.</p>
@@ -293,125 +87,69 @@
     </a>
   </div>
 </div>
-
-<footer>
-  <p><i class="fas fa-heart"></i> every heartbeat holds a memory of you <i class="fas fa-heart"></i></p>
-  <p style="margin-top: 6px;">with tenderness, for your birthday and all the days beyond</p>
-</footer>
-
+<footer><p><i class="fas fa-heart"></i> every heartbeat holds a memory of you <i class="fas fa-heart"></i></p></footer>
 <script>
-  // FOUR PHOTOS TOTAL: first two for birthday card, next two for maxwell card
-  const allPhotos = [
-    { src: "416cb3bd-e58e-4282-a686-c1d868ff8f0d.jpg", caption: "♥ a beautiful memory" },
-    { src: "4be54813-9bdf-4a54-97c4-13486baaa619.jpg", caption: "♥ a gentle moment" },
-    { src: "DSC_0551.jpeg", caption: "♥ captured with love" },
-    { src: "DSC_0555.jpeg", caption: "♥ a day to remember" }
+  const birthdayPhotos = [
+    "416cb3bd-e58e-4282-a686-c1d868ff8f0d.jpg",
+    "4be54813-9bdf-4a54-97c4-13486baaa619.jpg"
   ];
-
-  const birthdayPhotos = allPhotos.slice(0, 2);
-  const maxwellPhotos = allPhotos.slice(2, 4);
-
+  const maxwellPhotos = [
+    "DSC_0551.jpeg",
+    "DSC_0555.jpeg"
+  ];
   function renderPhotoStrips() {
     const birthdayStrip = document.getElementById('birthdayPhotoStrip');
-    const maxwellStrip = document.getElementById('maxwellPhotoStrip');
-    
     if (birthdayStrip) {
       birthdayStrip.innerHTML = '';
-      birthdayPhotos.forEach(photo => {
+      birthdayPhotos.forEach(src => {
         const img = document.createElement('img');
-        img.src = photo.src;
-        img.alt = photo.caption;
-        img.onerror = () => { img.src = 'https://placehold.co/400x300/1a2c1c/6f9e60?text=♥'; };
+        img.src = src;
+        img.alt = "Memory";
+        img.onerror = () => { img.src = 'https://placehold.co/400x300/1a2c1c/6f9e60?text=♥+Photo+Missing'; };
         birthdayStrip.appendChild(img);
       });
     }
-    
+    const maxwellStrip = document.getElementById('maxwellPhotoStrip');
     if (maxwellStrip) {
       maxwellStrip.innerHTML = '';
-      maxwellPhotos.forEach(photo => {
+      maxwellPhotos.forEach(src => {
         const img = document.createElement('img');
-        img.src = photo.src;
-        img.alt = photo.caption;
-        img.onerror = () => { img.src = 'https://placehold.co/400x300/1a2c1c/6f9e60?text=♥'; };
+        img.src = src;
+        img.alt = "Memory";
+        img.onerror = () => { img.src = 'https://placehold.co/400x300/1a2c1c/6f9e60?text=♥+Photo+Missing'; };
         maxwellStrip.appendChild(img);
       });
     }
   }
-
   function savePhotosToLocalStorage() {
-    localStorage.setItem('birthdayLetterPhotos', JSON.stringify(birthdayPhotos));
-    localStorage.setItem('maxwellLetterPhotos', JSON.stringify(maxwellPhotos));
+    localStorage.setItem('birthdayLetterPhotosList', JSON.stringify(birthdayPhotos));
+    localStorage.setItem('maxwellLetterPhotosList', JSON.stringify(maxwellPhotos));
   }
-
-  const mainPortrait = document.getElementById('mainPortrait');
   const changePhotoBtn = document.getElementById('changePhotoBtn');
-  
-  function changeMainPhoto() {
-    const fileInput = document.createElement('input');
-    fileInput.type = 'file';
-    fileInput.accept = 'image/*';
-    fileInput.onchange = (event) => {
-      const file = event.target.files[0];
-      if (file && file.type.startsWith('image/')) {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-          mainPortrait.src = e.target.result;
-          localStorage.setItem('mainBirthdayPhoto', mainPortrait.src);
-        };
-        reader.readAsDataURL(file);
-      } else {
-        alert("Please select an image file for the special photo.");
-      }
-    };
-    fileInput.click();
+  const mainPortrait = document.getElementById('mainPortrait');
+  if (changePhotoBtn) {
+    changePhotoBtn.addEventListener('click', () => {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = 'image/*';
+      input.onchange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (ev) => { mainPortrait.src = ev.target.result; };
+          reader.readAsDataURL(file);
+        }
+      };
+      input.click();
+    });
   }
-  
-  const savedMainPhoto = localStorage.getItem('mainBirthdayPhoto');
-  if (savedMainPhoto && mainPortrait) mainPortrait.src = savedMainPhoto;
-  if (changePhotoBtn) changePhotoBtn.addEventListener('click', changeMainPhoto);
-  
   renderPhotoStrips();
   savePhotosToLocalStorage();
-
   const heartFloater = document.createElement('div');
-  heartFloater.style.position = 'fixed';
-  heartFloater.style.bottom = '20px';
-  heartFloater.style.left = '20px';
-  heartFloater.style.backgroundColor = '#1f3a21';
-  heartFloater.style.width = '42px';
-  heartFloater.style.height = '42px';
-  heartFloater.style.borderRadius = '50%';
-  heartFloater.style.display = 'flex';
-  heartFloater.style.alignItems = 'center';
-  heartFloater.style.justifyContent = 'center';
-  heartFloater.style.cursor = 'pointer';
-  heartFloater.style.zIndex = '99';
-  heartFloater.style.border = '1px solid #6f9e60';
+  heartFloater.style.cssText = 'position:fixed;bottom:20px;left:20px;background:#1f3a21;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:99;border:1px solid #6f9e60';
   heartFloater.innerHTML = '<i class="fas fa-heart" style="color:#e2f0da; font-size:20px;"></i>';
   document.body.appendChild(heartFloater);
-  
-  heartFloater.addEventListener('click', () => {
-    alert("♥ Happy Birthday! You are so deeply loved. ♥");
-    for (let i = 0; i < 35; i++) {
-      const flyHeart = document.createElement('div');
-      flyHeart.innerHTML = '♥';
-      flyHeart.style.position = 'fixed';
-      flyHeart.style.bottom = '30px';
-      flyHeart.style.left = Math.random() * 100 + '%';
-      flyHeart.style.fontSize = (14 + Math.random() * 28) + 'px';
-      flyHeart.style.color = '#8bbd7a';
-      flyHeart.style.pointerEvents = 'none';
-      flyHeart.style.opacity = '0.8';
-      flyHeart.style.zIndex = '10000';
-      flyHeart.style.transition = 'transform 3s ease-out, opacity 2.5s';
-      document.body.appendChild(flyHeart);
-      setTimeout(() => {
-        flyHeart.style.transform = `translateY(-550px) rotate(12deg)`;
-        flyHeart.style.opacity = '0';
-      }, 10);
-      setTimeout(() => flyHeart.remove(), 3200);
-    }
-  });
+  heartFloater.addEventListener('click', () => alert("♥ Happy Birthday! You are so deeply loved. ♥"));
 </script>
 </body>
 </html>
