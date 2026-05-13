@@ -1,1 +1,190 @@
+<!-- readaftermaxwell.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read When Away From Maxwell ✦ A Letter for You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f1f15;
+      background-image: radial-gradient(circle at 70% 30%, rgba(45, 80, 45, 0.2) 1.5%, transparent 2%);
+      color: #dee9da;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 32px 24px; }
+    .back-home {
+      display: inline-block; background: #1e3521; border: 1px solid #568a49;
+      padding: 8px 20px; border-radius: 40px; color: #cce2c0; text-decoration: none; margin-bottom: 32px;
+    }
+    .back-home:hover { background: #2e4a2c; }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; color: #daf0ce; text-align: center; margin-bottom: 8px; }
+    .sub { text-align: center; color: #b2caa4; margin-bottom: 36px; border-bottom: 1px solid #2e4d2a; padding-bottom: 16px; }
+    .letter-card {
+      background: #122117; border-radius: 48px; border: 1px solid #2a4826;
+      padding: 48px 40px; box-shadow: 0 20px 30px -10px rgba(0,0,0,0.5);
+    }
+    .love-letter { font-size: 1.02rem; line-height: 1.75; color: #e0efd6; }
+    .love-letter p { margin-bottom: 18px; }
+    .signature { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; text-align: right; color: #b2d6a2; margin-top: 32px; }
+    .contact-number {
+      background: #1a2e1c;
+      padding: 12px 20px;
+      border-radius: 60px;
+      display: inline-block;
+      margin-top: 20px;
+      font-family: monospace;
+      font-size: 1.1rem;
+      border: 1px solid #6f9e60;
+      color: #d9f0cc;
+    }
+    .photo-gallery {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px; margin: 40px 0 20px;
+    }
+    .photo-gallery img {
+      width: 100%; height: 200px; object-fit: cover; border-radius: 24px;
+      border: 1px solid #2f4d2b; transition: 0.2s; cursor: pointer;
+    }
+    .photo-gallery img:hover { transform: scale(1.02); border-color: #86bb74; }
+    .edit-btn {
+      background: #1e3521; border: none; color: #c5e2b5; padding: 10px 24px;
+      border-radius: 60px; cursor: pointer; margin-top: 28px; display: inline-flex; align-items: center; gap: 8px;
+    }
+    .edit-btn:hover { background: #2c4a2a; }
+    footer { text-align: center; margin-top: 48px; color: #8faf82; font-size: 0.8rem; }
+    .lightbox {
+      display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(5, 15, 7, 0.96); align-items: center; justify-content: center;
+      z-index: 2000; backdrop-filter: blur(12px);
+    }
+    .lightbox-content { max-width: 80vw; max-height: 85vh; border-radius: 32px; overflow: hidden; border: 1px solid #5d8e50; }
+    .close-lightbox {
+      position: absolute; top: 28px; right: 36px; font-size: 40px; color: #d9f0cc;
+      cursor: pointer; background: #1a2e1c; width: 48px; height: 48px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    @media (max-width: 680px) {
+      .letter-card { padding: 28px 24px; }
+      h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> back home</a>
+  <div class="letter-card">
+    <h1>read when away from maxwell</h1>
+    <div class="sub"><i class="fas fa-star"></i> open this whenever you feel low — you are never alone</div>
+    
+    <div id="maxwellGallery" class="photo-gallery"></div>
+    
+    <div class="love-letter" id="maxwellMessage">
+      <p>Hey Nasi,</p>
+      <p>I wanted to make this section because I want you to open this every time you feel low when you leave Maxwell.</p>
+      <p><strong>NASIEKU GODWIN SHANGE</strong>, we have been through so much together, but our love never wavered. I always think about you, and I really don't know the type of guy I would have been if I never met you. You stand out among all flowers; you're the best of the best.</p>
+      <p>I know you're probably missing me, and yeah I would miss you too. Remember, you were someone's first love, and that was me. You made me feel seen and loved. I received that, and it was from that that I learned how to give love and make people feel seen.</p>
+      <p>I know sometimes you have the tendency to doubt how much impact you have on people's lives. I assure you, you are actually the light to some people's lives and you should continue to be that light because you are the best.</p>
+      <p>You taught me the verse Philippians 1:6, and you should always remember that God has an amazing plan for you. I hope to tell you the full love story of me and you before you graduate.</p>
+      <p>I also insist that you can always reach out to me.</p>
+      <div class="contact-number">
+        <i class="fas fa-phone-alt"></i> +254 114 206 155
+      </div>
+      <div class="signature">♥ always here for you, always ♥</div>
+    </div>
+    <button id="editMaxwellBtn" class="edit-btn"><i class="fas fa-pen"></i> write your own words</button>
+  </div>
+  <footer><i class="fas fa-heart"></i> this page is for the love that never fades</footer>
+</div>
 
+<div id="lightboxModal" class="lightbox"><span class="close-lightbox">✕</span><div class="lightbox-content"><img id="lightboxImg" src=""></div></div>
+
+<script>
+  let maxwellPhotos = [];
+  try {
+    const stored = localStorage.getItem('maxwellLetterPhotos');
+    if (stored) {
+      maxwellPhotos = JSON.parse(stored);
+    } else {
+      maxwellPhotos = [
+        { src: "DSC_0551.jpeg", caption: "♥ captured with love" },
+        { src: "DSC_0555.jpeg", caption: "♥ a day to remember" }
+      ];
+    }
+  } catch(e) { console.log(e); }
+
+  function renderGallery() {
+    const galleryDiv = document.getElementById('maxwellGallery');
+    if (!galleryDiv) return;
+    galleryDiv.innerHTML = '';
+    maxwellPhotos.forEach(photo => {
+      const img = document.createElement('img');
+      img.src = photo.src;
+      img.alt = photo.caption;
+      img.onerror = () => { img.src = 'https://placehold.co/400x300/1a2c1c/6f9e60?text=♥'; };
+      img.addEventListener('click', () => {
+        document.getElementById('lightboxImg').src = photo.src;
+        document.getElementById('lightboxModal').style.display = 'flex';
+      });
+      galleryDiv.appendChild(img);
+    });
+  }
+
+  renderGallery();
+
+  const letterDiv = document.getElementById('maxwellMessage');
+  const editBtn = document.getElementById('editMaxwellBtn');
+  function enableEditing() {
+    const currentHtml = letterDiv.innerHTML;
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = currentHtml;
+    const plainText = tempDiv.innerText;
+    const textarea = document.createElement('textarea');
+    textarea.value = plainText;
+    textarea.style.width = '100%';
+    textarea.style.height = '400px';
+    textarea.style.padding = '18px';
+    textarea.style.fontFamily = 'Inter, sans-serif';
+    textarea.style.fontSize = '0.95rem';
+    textarea.style.borderRadius = '24px';
+    textarea.style.border = '1px solid #568a49';
+    textarea.style.backgroundColor = '#1a2c1c';
+    textarea.style.color = '#e2f0da';
+    const saveBtn = document.createElement('button');
+    saveBtn.innerText = '♥ save letter ♥';
+    saveBtn.style.background = '#2c4d2a';
+    saveBtn.style.border = 'none';
+    saveBtn.style.color = '#eef5e7';
+    saveBtn.style.padding = '10px 24px';
+    saveBtn.style.borderRadius = '40px';
+    saveBtn.style.cursor = 'pointer';
+    saveBtn.style.marginTop = '18px';
+    letterDiv.innerHTML = '';
+    letterDiv.appendChild(textarea);
+    letterDiv.appendChild(saveBtn);
+    saveBtn.addEventListener('click', () => {
+      const newText = textarea.value;
+      const paragraphs = newText.split(/\r?\n\r?\n/);
+      let newHtml = '';
+      paragraphs.forEach(para => { if (para.trim()) newHtml += `<p>${para.trim().replace(/\n/g, '<br>')}</p>`; });
+      if (!newHtml) newHtml = `<p>${newText.replace(/\n/g, '<br>')}</p>`;
+      letterDiv.innerHTML = newHtml + `<div class="signature">♥ always here for you, always ♥</div>`;
+      localStorage.setItem('maxwellLetterPage', letterDiv.innerHTML);
+      const newBtn = document.getElementById('editMaxwellBtn');
+      if (newBtn) newBtn.addEventListener('click', enableEditing);
+    });
+  }
+  const saved = localStorage.getItem('maxwellLetterPage');
+  if (saved && letterDiv) letterDiv.innerHTML = saved;
+  if (editBtn) editBtn.addEventListener('click', enableEditing);
+
+  const lightbox = document.getElementById('lightboxModal');
+  const closeLight = document.querySelector('.close-lightbox');
+  if (closeLight) closeLight.addEventListener('click', () => lightbox.style.display = 'none');
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.style.display = 'none'; });
+</script>
+</body>
+</html>
