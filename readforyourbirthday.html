@@ -8,25 +8,149 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background: #0f1f15; color: #dee9da; }
+    body { 
+      font-family: 'Inter', sans-serif; 
+      background: #0f1f15; 
+      background-image: radial-gradient(circle at 20% 35%, rgba(55, 95, 55, 0.2) 1.5%, transparent 2%);
+      color: #dee9da; 
+    }
     .container { max-width: 1000px; margin: 0 auto; padding: 32px 24px; }
-    .back-home { display: inline-block; background: #1e3521; border: 1px solid #568a49; padding: 8px 20px; border-radius: 40px; color: #cce2c0; text-decoration: none; margin-bottom: 32px; }
+    .back-home { 
+      display: inline-block; 
+      background: #1e3521; 
+      border: 1px solid #568a49; 
+      padding: 8px 20px; 
+      border-radius: 40px; 
+      color: #cce2c0; 
+      text-decoration: none; 
+      margin-bottom: 32px;
+      transition: 0.2s;
+    }
     .back-home:hover { background: #2e4a2c; }
-    h1 { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; color: #daf0ce; text-align: center; margin-bottom: 8px; }
-    .sub { text-align: center; color: #b2caa4; margin-bottom: 36px; border-bottom: 1px solid #2e4d2a; padding-bottom: 16px; }
-    .letter-card { background: #122117; border-radius: 48px; border: 1px solid #2a4826; padding: 48px 40px; }
-    .love-letter { font-size: 1.02rem; line-height: 1.75; color: #e0efd6; }
+    h1 { 
+      font-family: 'Cormorant Garamond', serif; 
+      font-size: 2.6rem; 
+      color: #daf0ce; 
+      text-align: center; 
+      margin-bottom: 8px; 
+    }
+    .sub { 
+      text-align: center; 
+      color: #b2caa4; 
+      margin-bottom: 36px; 
+      border-bottom: 1px solid #2e4d2a; 
+      padding-bottom: 16px; 
+    }
+    .letter-card { 
+      background: #122117; 
+      border-radius: 48px; 
+      border: 1px solid #2a4826; 
+      padding: 48px 40px; 
+      box-shadow: 0 20px 30px -10px rgba(0,0,0,0.5);
+    }
+    .love-letter { 
+      font-size: 1.02rem; 
+      line-height: 1.75; 
+      color: #e0efd6; 
+    }
     .love-letter p { margin-bottom: 18px; }
-    .signature { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; text-align: right; color: #b2d6a2; margin-top: 32px; }
-    .photo-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin: 40px 0 20px; }
-    .photo-gallery img { width: 100%; height: 240px; object-fit: cover; border-radius: 24px; border: 1px solid #2f4d2b; cursor: pointer; transition: 0.2s; }
-    .photo-gallery img:hover { transform: scale(1.02); border-color: #86bb74; }
-    .edit-btn { background: #1e3521; border: none; color: #c5e2b5; padding: 10px 24px; border-radius: 60px; cursor: pointer; margin-top: 28px; display: inline-flex; align-items: center; gap: 8px; }
+    .signature { 
+      font-family: 'Cormorant Garamond', serif; 
+      font-size: 1.3rem; 
+      text-align: right; 
+      color: #b2d6a2; 
+      margin-top: 32px; 
+    }
+    .photo-gallery { 
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 24px; 
+      margin: 40px 0 30px; 
+    }
+    .photo-gallery img { 
+      width: 100%; 
+      height: 260px; 
+      object-fit: cover; 
+      border-radius: 24px; 
+      border: 2px solid #2f4d2b; 
+      cursor: pointer; 
+      transition: all 0.3s ease;
+    }
+    .photo-gallery img:hover { 
+      transform: scale(1.02); 
+      border-color: #86bb74; 
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .edit-btn { 
+      background: #1e3521; 
+      border: none; 
+      color: #c5e2b5; 
+      padding: 10px 24px; 
+      border-radius: 60px; 
+      cursor: pointer; 
+      margin-top: 28px; 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 8px;
+      transition: 0.2s;
+    }
     .edit-btn:hover { background: #2c4a2a; }
-    footer { text-align: center; margin-top: 48px; color: #8faf82; }
-    .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(5, 15, 7, 0.96); align-items: center; justify-content: center; z-index: 2000; backdrop-filter: blur(12px); }
-    .lightbox-content { max-width: 80vw; max-height: 85vh; border-radius: 32px; overflow: hidden; border: 1px solid #5d8e50; }
-    .close-lightbox { position: absolute; top: 28px; right: 36px; font-size: 40px; color: #d9f0cc; cursor: pointer; background: #1a2e1c; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    footer { text-align: center; margin-top: 48px; color: #8faf82; font-size: 0.85rem; }
+    
+    /* Lightbox styles */
+    .lightbox { 
+      display: none; 
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      background: rgba(5, 15, 7, 0.96); 
+      align-items: center; 
+      justify-content: center; 
+      z-index: 2000; 
+      backdrop-filter: blur(12px); 
+    }
+    .lightbox-content { 
+      max-width: 85vw; 
+      max-height: 85vh; 
+      border-radius: 32px; 
+      overflow: hidden; 
+      border: 2px solid #5d8e50; 
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+    .lightbox-content img { 
+      width: 100%; 
+      height: auto; 
+      display: block; 
+    }
+    .close-lightbox { 
+      position: absolute; 
+      top: 28px; 
+      right: 36px; 
+      font-size: 44px; 
+      color: #d9f0cc; 
+      cursor: pointer; 
+      background: #1a2e1c; 
+      width: 52px; 
+      height: 52px; 
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      transition: 0.2s;
+    }
+    .close-lightbox:hover { 
+      background: #487a3e; 
+      transform: scale(1.05);
+    }
+    
+    @media (max-width: 680px) {
+      .letter-card { padding: 28px 24px; }
+      h1 { font-size: 2rem; }
+      .photo-gallery { grid-template-columns: 1fr; gap: 16px; }
+      .photo-gallery img { height: 220px; }
+    }
   </style>
 </head>
 <body>
@@ -36,8 +160,11 @@
     <h1>for your birthday</h1>
     <div class="sub"><i class="fas fa-heart"></i> a letter written just for you, Nasi</div>
     
-    <!-- PHOTO GALLERY for read for your birthday page -->
-    <div id="birthdayGallery" class="photo-gallery"></div>
+    <!-- YOUR TWO PHOTOS FOR READ FOR YOUR BIRTHDAY PAGE -->
+    <div class="photo-gallery" id="birthdayGallery">
+      <img src="416cb3bd-e58e-4282-a686-c1d868ff8f0d.jpeg" alt="Beautiful memory with Nasi" onclick="openLightbox(this.src)">
+      <img src="4be54813-9bdf-4a54-97c4-13486baaa619.jpeg" alt="Gentle moment together" onclick="openLightbox(this.src)">
+    </div>
     
     <div class="love-letter" id="birthdayMessage">
       <p>Hey Nasi,</p>
@@ -54,77 +181,102 @@
   <footer><i class="fas fa-heart"></i> this page is yours to keep</footer>
 </div>
 
+<!-- Lightbox Modal -->
 <div id="lightboxModal" class="lightbox">
   <span class="close-lightbox">✕</span>
-  <div class="lightbox-content"><img id="lightboxImg" src=""></div>
+  <div class="lightbox-content">
+    <img id="lightboxImg" src="" alt="Enlarged memory">
+  </div>
 </div>
 
 <script>
-  // SAME PHOTOS as homepage for read for your birthday
-  const birthdayPhotos = [
-    "416cb3bd-e58e-4282-a686-c1d868ff8f0d.jpeg",
-    "4be54813-9bdf-4a54-97c4-13486baaa619.jpeg"
-  ];
-  
-  function renderGallery() {
-    const gallery = document.getElementById('birthdayGallery');
-    if (!gallery) return;
-    gallery.innerHTML = '';
-    birthdayPhotos.forEach(src => {
-      const img = document.createElement('img');
-      img.src = src;
-      img.alt = "Birthday Memory";
-      img.onerror = () => { img.src = 'https://placehold.co/400x300/1a2c1c/6f9e60?text=♥+Photo+Missing'; };
-      img.addEventListener('click', () => {
-        document.getElementById('lightboxImg').src = img.src;
-        document.getElementById('lightboxModal').style.display = 'flex';
-      });
-      gallery.appendChild(img);
-    });
+  // Lightbox functions
+  function openLightbox(src) {
+    const lightbox = document.getElementById('lightboxModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+    lightboxImg.src = src;
+    lightbox.style.display = 'flex';
   }
   
-  renderGallery();
+  function closeLightbox() {
+    document.getElementById('lightboxModal').style.display = 'none';
+  }
   
-  // Editable letter functionality
+  // Close lightbox with X button or clicking outside
+  const closeBtn = document.querySelector('.close-lightbox');
+  if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+  
+  const lightbox = document.getElementById('lightboxModal');
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  
+  // Editable letter functionality (preserves changes in localStorage)
   const letterDiv = document.getElementById('birthdayMessage');
   const editBtn = document.getElementById('editBirthdayBtn');
   
   function enableEditing() {
-    const currentHtml = letterDiv.innerHTML;
+    // Get current text content without HTML tags
     const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = currentHtml;
+    tempDiv.innerHTML = letterDiv.innerHTML;
     const plainText = tempDiv.innerText;
+    
     const textarea = document.createElement('textarea');
     textarea.value = plainText;
-    textarea.style.cssText = 'width:100%;height:400px;padding:18px;font-family:Inter;font-size:0.95rem;border-radius:24px;border:1px solid #568a49;background:#1a2c1c;color:#e2f0da';
+    textarea.style.cssText = 'width:100%;height:400px;padding:18px;font-family:Inter, sans-serif;font-size:0.95rem;border-radius:24px;border:2px solid #568a49;background:#1a2c1c;color:#e2f0da;line-height:1.6';
+    
     const saveBtn = document.createElement('button');
     saveBtn.innerText = '♥ save letter ♥';
-    saveBtn.style.cssText = 'background:#2c4d2a;border:none;color:#eef5e7;padding:10px 24px;border-radius:40px;cursor:pointer;margin-top:18px';
+    saveBtn.style.cssText = 'background:#2c4d2a;border:none;color:#eef5e7;padding:12px 28px;border-radius:40px;cursor:pointer;margin-top:20px;font-weight:500;transition:0.2s';
+    saveBtn.onmouseover = () => saveBtn.style.background = '#3a6037';
+    saveBtn.onmouseout = () => saveBtn.style.background = '#2c4d2a';
+    
     letterDiv.innerHTML = '';
     letterDiv.appendChild(textarea);
     letterDiv.appendChild(saveBtn);
+    
     saveBtn.addEventListener('click', () => {
       const newText = textarea.value;
       const paragraphs = newText.split(/\r?\n\r?\n/);
       let newHtml = '';
-      paragraphs.forEach(para => { if (para.trim()) newHtml += `<p>${para.trim().replace(/\n/g, '<br>')}</p>`; });
+      paragraphs.forEach(para => {
+        if (para.trim()) {
+          newHtml += `<p>${para.trim().replace(/\n/g, '<br>')}</p>`;
+        }
+      });
       if (!newHtml) newHtml = `<p>${newText.replace(/\n/g, '<br>')}</p>`;
       letterDiv.innerHTML = newHtml + `<div class="signature">♥ with all my heart, forever ♥</div>`;
       localStorage.setItem('birthdayLetterPage', letterDiv.innerHTML);
-      const newBtn = document.getElementById('editBirthdayBtn');
-      if (newBtn) newBtn.addEventListener('click', enableEditing);
+      
+      // Re-attach edit button functionality
+      const newEditBtn = document.getElementById('editBirthdayBtn');
+      if (newEditBtn) newEditBtn.addEventListener('click', enableEditing);
     });
   }
   
+  // Load saved letter if it exists
   const savedLetter = localStorage.getItem('birthdayLetterPage');
-  if (savedLetter && letterDiv) letterDiv.innerHTML = savedLetter;
+  if (savedLetter && letterDiv) {
+    letterDiv.innerHTML = savedLetter;
+  }
+  
   if (editBtn) editBtn.addEventListener('click', enableEditing);
   
-  // Lightbox close
-  const lightbox = document.getElementById('lightboxModal');
-  const closeLight = document.querySelector('.close-lightbox');
-  if (closeLight) closeLight.addEventListener('click', () => lightbox.style.display = 'none');
-  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.style.display = 'none'; });
+  // Also save the photos to localStorage so homepage can reference them
+  const birthdayPhotosList = [
+    "416cb3bd-e58e-4282-a686-c1d868ff8f0d.jpeg",
+    "4be54813-9bdf-4a54-97c4-13486baaa619.jpeg"
+  ];
+  localStorage.setItem('birthdayPhotosList', JSON.stringify(birthdayPhotosList));
+  
+  // Small floating heart for extra warmth
+  const heartFloater = document.createElement('div');
+  heartFloater.style.cssText = 'position:fixed;bottom:20px;left:20px;background:#1f3a21;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:99;border:2px solid #6f9e60;transition:0.2s';
+  heartFloater.innerHTML = '<i class="fas fa-heart" style="color:#e2f0da; font-size:20px;"></i>';
+  heartFloater.onmouseover = () => heartFloater.style.transform = 'scale(1.08)';
+  heartFloater.onmouseout = () => heartFloater.style.transform = 'scale(1)';
+  heartFloater.onclick = () => alert("♥ Happy Birthday, Nasi! You are so deeply loved. ♥");
+  document.body.appendChild(heartFloater);
 </script>
 </body>
 </html>
