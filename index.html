@@ -62,7 +62,7 @@
 </div>
 <div class="container">
   <div class="photo-frame">
-    <img id="mainPortrait" src="416cb3bd-e58e-4282-a686-c1d868ff8f0d.jpg" alt="Cherished memory" onerror="this.src='https://placehold.co/600x400/1a2c1c/6f9e60?text=Upload+Photo'">
+    <img id="mainPortrait" src="IMG_6181.jpeg" alt="Cherished memory" onerror="this.src='https://placehold.co/600x400/1a2c1c/6f9e60?text=Upload+Photo'">
     <div class="photo-frame-caption">
       <i class="fas fa-heart"></i> a moment we hold close
       <div><button id="changePhotoBtn" class="change-photo-btn"><i class="fas fa-camera"></i> change this photo</button></div>
@@ -89,14 +89,17 @@
 </div>
 <footer><p><i class="fas fa-heart"></i> every heartbeat holds a memory of you <i class="fas fa-heart"></i></p></footer>
 <script>
+  // PHOTOS FOR READ FOR YOUR BIRTHDAY CARD (2 photos)
   const birthdayPhotos = [
-    "416cb3bd-e58e-4282-a686-c1d868ff8f0d.jpg",
-    "4be54813-9bdf-4a54-97c4-13486baaa619.jpg"
+    "416cb3bd-e58e-4282-a686-c1d868ff8f0d.jpeg",
+    "4be54813-9bdf-4a54-97c4-13486baaa619.jpeg"
   ];
+  // PHOTOS FOR READ AFTER MAXWELL CARD (2 photos)
   const maxwellPhotos = [
     "DSC_0551.jpeg",
     "DSC_0555.jpeg"
   ];
+  
   function renderPhotoStrips() {
     const birthdayStrip = document.getElementById('birthdayPhotoStrip');
     if (birthdayStrip) {
@@ -104,7 +107,7 @@
       birthdayPhotos.forEach(src => {
         const img = document.createElement('img');
         img.src = src;
-        img.alt = "Memory";
+        img.alt = "Birthday Memory";
         img.onerror = () => { img.src = 'https://placehold.co/400x300/1a2c1c/6f9e60?text=♥+Photo+Missing'; };
         birthdayStrip.appendChild(img);
       });
@@ -115,16 +118,17 @@
       maxwellPhotos.forEach(src => {
         const img = document.createElement('img');
         img.src = src;
-        img.alt = "Memory";
+        img.alt = "Maxwell Memory";
         img.onerror = () => { img.src = 'https://placehold.co/400x300/1a2c1c/6f9e60?text=♥+Photo+Missing'; };
         maxwellStrip.appendChild(img);
       });
     }
   }
-  function savePhotosToLocalStorage() {
-    localStorage.setItem('birthdayLetterPhotosList', JSON.stringify(birthdayPhotos));
-    localStorage.setItem('maxwellLetterPhotosList', JSON.stringify(maxwellPhotos));
-  }
+  
+  // Save to localStorage so the detail pages can use the same photos
+  localStorage.setItem('birthdayPhotosList', JSON.stringify(birthdayPhotos));
+  localStorage.setItem('maxwellPhotosList', JSON.stringify(maxwellPhotos));
+  
   const changePhotoBtn = document.getElementById('changePhotoBtn');
   const mainPortrait = document.getElementById('mainPortrait');
   if (changePhotoBtn) {
@@ -143,8 +147,10 @@
       input.click();
     });
   }
+  
   renderPhotoStrips();
-  savePhotosToLocalStorage();
+  
+  // Floating heart surprise
   const heartFloater = document.createElement('div');
   heartFloater.style.cssText = 'position:fixed;bottom:20px;left:20px;background:#1f3a21;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:99;border:1px solid #6f9e60';
   heartFloater.innerHTML = '<i class="fas fa-heart" style="color:#e2f0da; font-size:20px;"></i>';
