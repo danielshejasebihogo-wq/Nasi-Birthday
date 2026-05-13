@@ -1,1 +1,224 @@
+<!-- readforyourbirthday.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Your Birthday ✦ A Letter from the Heart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f1f15;
+      background-image: radial-gradient(circle at 20% 35%, rgba(55, 95, 55, 0.2) 1.5%, transparent 2%);
+      color: #dee9da;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 32px 24px; }
+    .back-home {
+      display: inline-block;
+      background: #1e3521;
+      border: 1px solid #568a49;
+      padding: 8px 20px;
+      border-radius: 40px;
+      color: #cce2c0;
+      text-decoration: none;
+      margin-bottom: 32px;
+      transition: 0.2s;
+    }
+    .back-home:hover { background: #2e4a2c; }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      color: #daf0ce;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .sub {
+      text-align: center;
+      color: #b2caa4;
+      margin-bottom: 36px;
+      border-bottom: 1px solid #2e4d2a;
+      padding-bottom: 16px;
+    }
+    .letter-card {
+      background: #122117;
+      border-radius: 48px;
+      border: 1px solid #2a4826;
+      padding: 48px 40px;
+      box-shadow: 0 20px 30px -10px rgba(0,0,0,0.5);
+    }
+    .love-letter {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: #e0efd6;
+    }
+    .love-letter p { margin-bottom: 18px; }
+    .signature {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      text-align: right;
+      color: #b2d6a2;
+      margin-top: 32px;
+    }
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      margin: 40px 0 20px;
+    }
+    .photo-gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 24px;
+      border: 1px solid #2f4d2b;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+    .photo-gallery img:hover { transform: scale(1.02); border-color: #86bb74; }
+    .edit-btn {
+      background: #1e3521;
+      border: none;
+      color: #c5e2b5;
+      padding: 10px 24px;
+      border-radius: 60px;
+      cursor: pointer;
+      margin-top: 28px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.2s;
+    }
+    .edit-btn:hover { background: #2c4a2a; }
+    footer { text-align: center; margin-top: 48px; color: #8faf82; font-size: 0.8rem; }
+    .lightbox {
+      display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(5, 15, 7, 0.96); align-items: center; justify-content: center;
+      z-index: 2000; backdrop-filter: blur(12px);
+    }
+    .lightbox-content { max-width: 80vw; max-height: 85vh; border-radius: 32px; overflow: hidden; border: 1px solid #5d8e50; }
+    .close-lightbox {
+      position: absolute; top: 28px; right: 36px; font-size: 40px; color: #d9f0cc;
+      cursor: pointer; background: #1a2e1c; width: 48px; height: 48px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    @media (max-width: 680px) {
+      .letter-card { padding: 28px 24px; }
+      h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> back home</a>
+  <div class="letter-card">
+    <h1>for your birthday</h1>
+    <div class="sub"><i class="fas fa-heart"></i> a letter written just for you, Nasi</div>
+    
+    <div id="birthdayGallery" class="photo-gallery"></div>
+    
+    <div class="love-letter" id="birthdayMessage">
+      <p>Hey Nasi,</p>
+      <p>Happy 17th birthday to you, my love.</p>
+      <p>I mean, I don't even know where to start on how appreciative I am of you in my life. You're always a person who's just there in the right moments when I need you. I've known you for so super long, and we definitely go wayyyyyy back. In 8th grade, you were the first freshman girl to talk to me, and I felt so welcomed by it. I eventually started seeing you way more, and poof, you became a major factor in my life.</p>
+      <p>We really have had our ups and downs, from you absolutely despising me in my freshman year to you wanting to be inside my skin. What a rollercoaster. I don't think I can emphasize it enough, but I always tell you that you have made me a better person. I believe it's also self-evident for you to see. You brought me closer to God, and you made me become goal-oriented in a positive way.</p>
+      <p>Some things I don't like doing, but I do because I love you and you wouldn't want to be embarrassed by me. Your jokes, the nonsense that you say, they all add some life to me. Even though we literally fight about the minutest unimportant things, which shows me how annoying you are, we've never really had a real fight. This is exactly why I appreciate our friendship and relationship.</p>
+      <p>You definitely are turning 17, but mentally, you're like 25 years old and mature. The way you take care of me, I cannot start; I literally call you "Mother" sometimes. You have a small family of your own that you hold and treat dearly, and that's what I actually love most about you. Your caring ability.</p>
+      <p>You being in this world has brought sooo many people joy and happiness. I am forever grateful for you and the part that you have played in my life, and I hope maybe later on, God willing, you will continue to play this part, maybe at our wedding in 2036. I love you so much, and you are such a blessing.</p>
+      <div class="signature">♥ with all my heart, forever ♥</div>
+    </div>
+    <button id="editBirthdayBtn" class="edit-btn"><i class="fas fa-pen"></i> write your own words</button>
+  </div>
+  <footer><i class="fas fa-heart"></i> this page is yours to keep</footer>
+</div>
 
+<div id="lightboxModal" class="lightbox"><span class="close-lightbox">✕</span><div class="lightbox-content"><img id="lightboxImg" src=""></div></div>
+
+<script>
+  let birthdayPhotos = [];
+  try {
+    const stored = localStorage.getItem('birthdayLetterPhotos');
+    if (stored) {
+      birthdayPhotos = JSON.parse(stored);
+    } else {
+      birthdayPhotos = [
+        { src: "416cb3bd-e58e-4282-a686-c1d868ff8f0d.jpg", caption: "♥ a beautiful memory" },
+        { src: "4be54813-9bdf-4a54-97c4-13486baaa619.jpg", caption: "♥ a gentle moment" }
+      ];
+    }
+  } catch(e) { console.log(e); }
+
+  function renderGallery() {
+    const galleryDiv = document.getElementById('birthdayGallery');
+    if (!galleryDiv) return;
+    galleryDiv.innerHTML = '';
+    birthdayPhotos.forEach(photo => {
+      const img = document.createElement('img');
+      img.src = photo.src;
+      img.alt = photo.caption;
+      img.onerror = () => { img.src = 'https://placehold.co/400x300/1a2c1c/6f9e60?text=♥'; };
+      img.addEventListener('click', () => {
+        document.getElementById('lightboxImg').src = photo.src;
+        document.getElementById('lightboxModal').style.display = 'flex';
+      });
+      galleryDiv.appendChild(img);
+    });
+  }
+
+  renderGallery();
+
+  const letterDiv = document.getElementById('birthdayMessage');
+  const editBtn = document.getElementById('editBirthdayBtn');
+  function enableEditing() {
+    const currentHtml = letterDiv.innerHTML;
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = currentHtml;
+    const plainText = tempDiv.innerText;
+    const textarea = document.createElement('textarea');
+    textarea.value = plainText;
+    textarea.style.width = '100%';
+    textarea.style.height = '400px';
+    textarea.style.padding = '18px';
+    textarea.style.fontFamily = 'Inter, sans-serif';
+    textarea.style.fontSize = '0.95rem';
+    textarea.style.borderRadius = '24px';
+    textarea.style.border = '1px solid #568a49';
+    textarea.style.backgroundColor = '#1a2c1c';
+    textarea.style.color = '#e2f0da';
+    const saveBtn = document.createElement('button');
+    saveBtn.innerText = '♥ save letter ♥';
+    saveBtn.style.background = '#2c4d2a';
+    saveBtn.style.border = 'none';
+    saveBtn.style.color = '#eef5e7';
+    saveBtn.style.padding = '10px 24px';
+    saveBtn.style.borderRadius = '40px';
+    saveBtn.style.cursor = 'pointer';
+    saveBtn.style.marginTop = '18px';
+    letterDiv.innerHTML = '';
+    letterDiv.appendChild(textarea);
+    letterDiv.appendChild(saveBtn);
+    saveBtn.addEventListener('click', () => {
+      const newText = textarea.value;
+      const paragraphs = newText.split(/\r?\n\r?\n/);
+      let newHtml = '';
+      paragraphs.forEach(para => { if (para.trim()) newHtml += `<p>${para.trim().replace(/\n/g, '<br>')}</p>`; });
+      if (!newHtml) newHtml = `<p>${newText.replace(/\n/g, '<br>')}</p>`;
+      letterDiv.innerHTML = newHtml + `<div class="signature">♥ with all my heart, forever ♥</div>`;
+      localStorage.setItem('birthdayLetterPage', letterDiv.innerHTML);
+      const newBtn = document.getElementById('editBirthdayBtn');
+      if (newBtn) newBtn.addEventListener('click', enableEditing);
+    });
+  }
+  const saved = localStorage.getItem('birthdayLetterPage');
+  if (saved && letterDiv) letterDiv.innerHTML = saved;
+  if (editBtn) editBtn.addEventListener('click', enableEditing);
+
+  const lightbox = document.getElementById('lightboxModal');
+  const closeLight = document.querySelector('.close-lightbox');
+  if (closeLight) closeLight.addEventListener('click', () => lightbox.style.display = 'none');
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.style.display = 'none'; });
+</script>
+</body>
+</html>
